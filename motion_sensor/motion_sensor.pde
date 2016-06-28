@@ -12,7 +12,7 @@ int value= digitalRead(inputPin);
 if (value == HIGH)
 {
 digitalWrite(ledPin, HIGH);
-delay(60000);
+delay(1000);
 digitalWrite(ledPin, LOW);
 }
 else
