@@ -1,33 +1,29 @@
-#include <Servo.h>
-Servo myservo;
+// Sweep
+// by BARRAGAN <http://barraganstudio.com> 
+// This example code is in the public domain.
 
-const int ledPin= 13;
-const int inputPin= 2;
-int pos = 0;
+// NOTE: UART will be disabled when servo is attached to pin 0 or 1.
 
-void setup(){
-pinMode(ledPin, OUTPUT);
-myservo.attach(9);
-pinMode(inputPin, INPUT);
+
+#include <Servo.h> 
+ 
+Servo myservo;  // create servo object to control a servo 
+               // a maximum of eight servo objects can be created 
+ 
+int pos = 0;    // variable to store the servo position 
+ 
+void setup() 
+{ 
+  myservo.attach(9);  // attaches the servo on pin 9 to the servo object 
+} 
+ 
+ 
+void loop() 
+{ 
+  pos=10 
+  myservo.write(pos);              // tell servo to go to position in variable 'pos' 
+  delay(1000); // waits 15ms for the servo to reach the position 
+  pos=0
+  myservo.write(pos);              // tell servo to go to position in variable 'pos' 
+  delay(15);                       // waits 15ms for the servo to reach the position 
 }
-
-void loop(){
-int value= digitalRead(inputPin);
-
-if (value == HIGH)
-{
-digitalWrite(ledPin, HIGH);
-myservo.writeMicroseconds(1400);
-delay(1000);
-myservo.writeMicroseconds(1000);
-delay(3000);
-digitalWrite(ledPin, LOW);
-}
-else
-{
-digitalWrite(ledPin, LOW);
-miservo.write(pos);
-}
-
-}
-
