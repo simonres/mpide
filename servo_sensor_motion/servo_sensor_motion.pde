@@ -42,7 +42,7 @@ if  (value == HIGH)
     myservo.write(pos);              // tell servo to go to position in variable 'pos' 
     delay(15);                       // waits 15ms for the servo to reach the position 
   } 
-delay(150);
+delay(1000);
 }
 else
 {
