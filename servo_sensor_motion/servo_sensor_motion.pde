@@ -35,6 +35,7 @@ if  (value == HIGH)
     myservo.write(pos);              // tell servo to go to position in variable 'pos' 
     delay(15);                       // waits 15ms for the servo to reach the position 
   }
+ delay(500);
  digitalWrite(ledv, LOW); 
   for(pos = 150; pos>=1; pos-=4)     // goes from 180 degrees to 0 degrees 
   {                                
