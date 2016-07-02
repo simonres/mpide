@@ -16,7 +16,7 @@ void setup()
   pinMode(ledv, OUTPUT);
   pinMode(ledr, OUTPUT);
   myservo.attach(9);  // attaches the servo on pin 9 to the servo object 
-  myservo2.attach(9);
+  myservo2.attach(8);
 } 
  
  
@@ -28,13 +28,13 @@ if  (value == HIGH)
 {
   digitalWrite(ledr, LOW); 
   digitalWrite(ledv, HIGH);
- 
+           
  for(pos = 90; pos>=1; pos-=4)     
   {                                
     myservo2.write(pos);               
     delay(15);                      
   } 
-delay(2000); 
+delay(1000); 
   
   for(pos = 0; pos < 180; pos += 4)  // goes from 0 degrees to 180 degrees 
   {                                  // in steps of 4 degree 
